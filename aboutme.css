@@ -1,0 +1,515 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #f1f5f9;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+.desktop {
+    position: relative;
+    width: 100%;
+    height: 953px;
+    overflow: hidden;
+    background: url(images/background\ 1.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+
+
+.welcome-card {
+    padding: 35px;
+
+    background: rgba(17, 24, 42, 0.72);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 22px;
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+
+    animation: fadeUp 1s ease both;
+}
+
+
+/* Welcome card header */
+
+.welcome-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+.welcome-label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #a5b4c9;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.version-label {
+    font-size: 9px;
+    color: #64748b;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   8. PROFILE INFORMATION
+========================================= */
+
+.profile-area {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+/* Profile image placeholder */
+
+.profile-image {
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: 105px;
+    height: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #8b5cf6,
+        #06b6d4
+    );
+
+    border: 4px solid rgba(255,255,255,0.12);
+
+    box-shadow: 0 0 35px rgba(139,92,246,0.25);
+}
+
+.profile-image span {
+    font-size: 35px;
+    font-weight: 800;
+    color: white;
+}
+
+.profile-online {
+    position: absolute;
+
+    width: 16px;
+    height: 16px;
+
+    right: 5px;
+    bottom: 5px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    border: 3px solid #11182a;
+}
+
+
+/* Profile text */
+
+.greeting {
+    color: #22d3ee;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.profile-information h1 {
+    font-size: clamp(24px, 3vw, 37px);
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    margin-bottom: 8px;
+}
+
+.profile-information h1 span {
+    background: linear-gradient(
+        90deg,
+        #a78bfa,
+        #22d3ee
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.profile-information h2 {
+    color: #a5b4fc;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    margin-bottom: 15px;
+}
+
+.introduction {
+    max-width: 420px;
+
+    color: #9ca8bb;
+
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   9. WELCOME CARD BOTTOM
+========================================= */
+
+.welcome-divider {
+    width: 100%;
+    height: 1px;
+
+    background: rgba(255,255,255,0.09);
+
+    margin: 30px 0 22px;
+}
+
+.welcome-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.availability {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    font-size: 10px;
+    color: #a5b4c9;
+}
+
+.explore-button {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 12px 17px;
+
+    border-radius: 8px;
+
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #7c3aed,
+        #4f46e5
+    );
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.explore-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 25px rgba(124,58,237,0.4);
+}
+
+.explore-button span {
+    font-size: 17px;
+}
+
+
+
+
+
+/* =========================================
+   13. ANIMATIONS
+========================================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+/* =========================================
+   14. TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .welcome-section {
+        width: 78%;
+        grid-template-columns: 1fr;
+        transform: translate(-42%, -45%);
+    }
+
+    .floating-card {
+        display: none;
+    }
+
+    .desktop-icons {
+        left: 2%;
+    }
+
+}
+
+
+/* =========================================
+   15. MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 650px) {
+
+    .desktop {
+        min-height: 100svh;
+    }
+
+    .topbar {
+        height: 65px;
+        padding: 0 18px;
+    }
+
+    .brand {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .brand-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .top-navigation {
+        display: none;
+    }
+
+    .system-status {
+        font-size: 9px;
+    }
+
+    .system-version {
+        display: none;
+    }
+
+    .desktop-content {
+        min-height: calc(100svh - 65px);
+        padding: 25px 18px 115px;
+    }
+
+    .desktop-icons {
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        gap: 5px;
+
+        margin-bottom: 35px;
+    }
+
+    .desktop-icon {
+        width: 100%;
+        gap: 7px;
+        font-size: 9px;
+    }
+
+    .app-icon {
+        width: 43px;
+        height: 43px;
+        border-radius: 12px;
+        font-size: 19px;
+    }
+
+    .welcome-section {
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        transform: none;
+
+        width: 100%;
+        display: block;
+    }
+
+    .welcome-card {
+        padding: 22px 18px;
+        border-radius: 18px;
+    }
+
+    .welcome-top {
+        margin-bottom: 25px;
+    }
+
+    .welcome-label {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .version-label {
+        font-size: 7px;
+    }
+
+    .profile-area {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .profile-image {
+        width: 85px;
+        height: 85px;
+    }
+
+    .profile-image span {
+        font-size: 28px;
+    }
+
+    .profile-information h1 {
+        font-size: 29px;
+    }
+
+    .profile-information h2 {
+        font-size: 13px;
+    }
+
+    .introduction {
+        font-size: 11px;
+    }
+
+    .welcome-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .explore-button {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .dock-container {
+        bottom: 27px;
+    }
+
+    .dock {
+        gap: 8px;
+        padding: 9px 12px;
+    }
+
+    .dock-item {
+        width: 39px;
+        height: 39px;
+        font-size: 18px;
+    }
+
+    .system-footer {
+        display: none;
+    }
+
+}
+
+
+/* =========================================
+   16. SMALL MOBILE SCREENS
+========================================= */
+
+@media (max-width: 380px) {
+
+    .desktop-icons {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 18px;
+    }
+
+    .welcome-card {
+        padding: 18px 14px;
+    }
+
+    .welcome-label {
+        font-size: 7px;
+    }
+
+    .dock {
+        gap: 5px;
+        padding: 8px;
+    }
+
+    .dock-item {
+        width: 35px;
+        height: 35px;
+    }
+
+}
