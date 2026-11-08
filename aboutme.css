@@ -60,7 +60,7 @@ body{
 }
 
 
-/* Welcome card header */
+
 
 .welcome-top {
     display: flex;
@@ -89,9 +89,6 @@ body{
 }
 
 
-/* =========================================
-   8. PROFILE INFORMATION
-========================================= */
 
 .profile-area {
     display: flex;
@@ -100,7 +97,7 @@ body{
 }
 
 
-/* Profile image placeholder */
+
 
 .profile-image {
     position: relative;
